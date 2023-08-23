@@ -1,0 +1,19 @@
+{
+  "item.steelmod.steel_ingot": "Steel Ingot",
+  "item.steelmod.steel_nugget": "Steel Nugget",
+  "item.steelmod.raw_iron_disulfide": "Raw Iron Disulfide",
+  "item.steelmod.metal_detector": "Metal Detector",
+  "item.steelmod.coke": "Coke",
+
+  "block.steelmod.steel_block": "Block of Steel",
+  "block.steelmod.iron_disulfide": "Iron Disulfide",
+
+  "creativetab.ingredient_tab": "Felix's Steel Mod Ingredients",
+  "creativetab.block_tab": "Felix's Steel Mod Blocks",
+  "creativetab.ore_tab": "Felix's Steel Mod Ores",
+  "creativetab.item_tab": "Felix's Steel Mod Items",
+  "creativetab.tool_tab": "Felix's Steel Mod Tools",
+
+  "tooltip.steelmod.metal_detetor.tooltip": "Find ores underground.",
+  "tooltip.steelmod.coke.tooltip": "A type of fuel which contains more pure carbon than usual coal."
+}

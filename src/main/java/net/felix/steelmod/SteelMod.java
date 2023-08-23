@@ -1,6 +1,10 @@
 package net.felix.steelmod;
 
 import com.mojang.logging.LogUtils;
+import net.felix.steelmod.block.ModBlocks;
+import net.felix.steelmod.item.ModCreativeTab;
+import net.felix.steelmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -29,17 +33,20 @@ public class SteelMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeTab.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
+
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -49,8 +56,16 @@ public class SteelMod
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.STEELINGOT);
+            event.accept(ModItems.STEELNUGGET);
+            event.accept(ModItems.RAWIRONDISULFIDE);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.STEELBLOCK);
+            event.accept(ModBlocks.IRONDISULFIDE);
+        }
 
     }
 
