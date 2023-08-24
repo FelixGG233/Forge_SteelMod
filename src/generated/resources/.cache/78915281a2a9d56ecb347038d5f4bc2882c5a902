@@ -1,0 +1,4 @@
+// 1.20.1	2023-08-23T21:15:48.6188301	Tags for minecraft:block mod id steelmod
+6142b25e77340a7e6d051c8ac5ae06ac82926725 data/minecraft/tags/blocks/mineable/pickaxe.json
+574656c5d65d1d21a32e6c9ad4e88e96f4fa9d45 data/minecraft/tags/blocks/needs_iron_tool.json
+6e0318cd559cb6816d255628deeb737367e39fc8 data/steelmod/tags/blocks/metal_detector_valuables.json
