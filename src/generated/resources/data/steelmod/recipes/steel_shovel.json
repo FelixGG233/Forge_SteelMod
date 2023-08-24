@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "-": {
+      "item": "steelmod:steel_ingot"
+    },
+    "=": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " - ",
+    " = ",
+    " = "
+  ],
+  "result": {
+    "item": "steelmod:steel_shovel"
+  },
+  "show_notification": true
+}

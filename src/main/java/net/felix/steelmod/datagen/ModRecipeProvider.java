@@ -5,6 +5,7 @@ import net.felix.steelmod.block.ModBlocks;
 import net.felix.steelmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -15,8 +16,9 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> STEEL_SMELTABLES = List.of(ModItems.RAWIRONDISULFIDE.get(),
-            ModBlocks.IRONDISULFIDE.get());
+    private static final List<ItemLike> STEEL_SMELTABLES = List.of(ModItems.STEELINGOT.get(), Items.IRON_INGOT);
+    private static final List<ItemLike> COKE_SMELTABLES = List.of(ModItems.COKE.get(), Items.CHARCOAL);
+    private static final List<ItemLike> IRONDISULFIDE_SMELTABLES = List.of(Items.IRON_INGOT, ModItems.RAWIRONDISULFIDE.get(),ModBlocks.IRONDISULFIDE.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -24,8 +26,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         oreBlasting(pWriter, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEELINGOT.get(), 1.2f, 450, "steel");
-        oreBlasting(pWriter, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEELNUGGET.get(), 0.2f, 100, "steel");
-        oreBlasting(pWriter,STEEL_SMELTABLES,RecipeCategory.MISC,ModItems.COKE.get(),1.0f,300,"coke");
+        oreBlasting(pWriter,COKE_SMELTABLES,RecipeCategory.MISC,ModItems.COKE.get(),1.0f,300,"coke");
+        oreBlasting(pWriter,IRONDISULFIDE_SMELTABLES,RecipeCategory.MISC, Items.IRON_INGOT, 0.7f,100,"iron");
+        oreSmelting(pWriter,IRONDISULFIDE_SMELTABLES,RecipeCategory.MISC, Items.IRON_INGOT, 0.7f,200,"iron");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModBlocks.STEELBLOCK.get())
                 .pattern("SSS")
@@ -35,13 +38,77 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STEELINGOT.get())
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', ModItems.STEELINGOT.get())
-                .unlockedBy(getHasName(ModItems.STEELNUGGET.get()), has(ModItems.STEELNUGGET.get()))
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_SWORD.get())
+                .pattern(" & ")
+                .pattern(" & ")
+                .pattern(" * ")
+                .define('*', Items.STICK)
+                .define('&',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_PICKAXE.get())
+                .pattern("%%%")
+                .pattern(" @ ")
+                .pattern(" @ ")
+                .define('@', Items.STICK)
+                .define('%',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_AXE.get())
+                .pattern("!! ")
+                .pattern("!+ ")
+                .pattern(" + ")
+                .define('+', Items.STICK)
+                .define('!',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_SHOVEL.get())
+                .pattern(" - ")
+                .pattern(" = ")
+                .pattern(" = ")
+                .define('=', Items.STICK)
+                .define('-',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_HOE.get())
+                .pattern(".. ")
+                .pattern(" , ")
+                .pattern(" , ")
+                .define(',', Items.STICK)
+                .define('.',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_HELMET.get())
+                .pattern("```")
+                .pattern("` `")
+                .pattern("   ")
+                .define('`',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_CHESTPLATE.get())
+                .pattern("` `")
+                .pattern("```")
+                .pattern("```")
+                .define('`',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_LEGGINGS.get())
+                .pattern("```")
+                .pattern("` `")
+                .pattern("` `")
+                .define('`',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,ModItems.STEEL_BOOTS.get())
+                .pattern("` `")
+                .pattern("` `")
+                .pattern("   ")
+                .define('`',ModItems.STEELINGOT.get())
+                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
+                .save(pWriter);
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEELINGOT.get(), 9)
                 .requires(ModBlocks.STEELBLOCK.get())

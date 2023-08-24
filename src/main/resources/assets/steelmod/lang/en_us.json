@@ -5,14 +5,31 @@
   "item.steelmod.metal_detector": "Metal Detector",
   "item.steelmod.coke": "Coke",
 
+  "item.steelmod.steel_sword": "Steel Sword",
+  "item.steelmod.steel_pickaxe": "Steel Pickaxe",
+  "item.steelmod.steel_axe": "Steel Axe",
+  "item.steelmod.steel_shovel": "Steel Shovel",
+  "item.steelmod.steel_hoe": "Steel Hoe",
+
   "block.steelmod.steel_block": "Block of Steel",
   "block.steelmod.iron_disulfide": "Iron Disulfide",
+
+  "block.steelmod.steel_stairs": "Steel Stair",
+  "block.steelmod.steel_slab": "Steel Slab",
+  "block.steelmod.steel_button": "Steel Button",
+  "block.steelmod.steel_pressure_plate": "Steel Pressure Plate",
+  "block.steelmod.steel_fence": "Steel Fence",
+  "block.steelmod.steel_fence_gate": "Steel Fence Gate",
+  "block.steelmod.steel_wall": "Steel Wall",
+  "block.steelmod.steel_door": "Steel Door",
+  "block.steelmod.steel_trap_door": "Steel Trap Door",
 
   "creativetab.ingredient_tab": "Felix's Steel Mod Ingredients",
   "creativetab.block_tab": "Felix's Steel Mod Blocks",
   "creativetab.ore_tab": "Felix's Steel Mod Ores",
   "creativetab.item_tab": "Felix's Steel Mod Items",
   "creativetab.tool_tab": "Felix's Steel Mod Tools",
+  "creativetab.armor_tab": "Felix's Steel Mod Armors",
 
   "tooltip.steelmod.metal_detetor.tooltip": "Find ores underground.",
   "tooltip.steelmod.coke.tooltip": "A type of fuel which contains more pure carbon than usual coal."

@@ -24,12 +24,50 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.IRONDISULFIDE.get()).addTag(Tags.Blocks.ORES);
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.IRONDISULFIDE.get());
+                .add(ModBlocks.IRONDISULFIDE.get(),
+                        ModBlocks.STEELBLOCK.get(),
+
+                        ModBlocks.STEELFENCE.get(),
+                        ModBlocks.STEELPRESSUREPLATE.get(),
+                        ModBlocks.STEELTRAPDOOR.get(),
+                        ModBlocks.STEELWALL.get(),
+                        ModBlocks.STEELSTAIRS.get(),
+                        ModBlocks.STEELFENCEGATE.get(),
+                        ModBlocks.STEELDOOR.get()
+                );
+        this.tag(ModTags.Blocks.NEEDS_STEEL_TOOL)
+                .add(ModBlocks.IRONDISULFIDE.get(),
+                        ModBlocks.STEELBLOCK.get(),
+
+                        ModBlocks.STEELFENCE.get(),
+                        ModBlocks.STEELPRESSUREPLATE.get(),
+                        ModBlocks.STEELTRAPDOOR.get(),
+                        ModBlocks.STEELWALL.get(),
+                        ModBlocks.STEELSTAIRS.get(),
+                        ModBlocks.STEELFENCEGATE.get(),
+                        ModBlocks.STEELDOOR.get()
+                );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.IRONDISULFIDE.get(),
-                        ModBlocks.STEELBLOCK.get()
+                        ModBlocks.STEELBLOCK.get(),
 
+                        ModBlocks.STEELFENCE.get(),
+                        ModBlocks.STEELPRESSUREPLATE.get(),
+                        ModBlocks.STEELTRAPDOOR.get(),
+                        ModBlocks.STEELWALL.get(),
+                        ModBlocks.STEELSTAIRS.get(),
+                        ModBlocks.STEELFENCEGATE.get(),
+                        ModBlocks.STEELDOOR.get()
                 );
+
+
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.STEELFENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.STEELFENCEGATE.get());
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.STEELWALL.get());
     }
 }

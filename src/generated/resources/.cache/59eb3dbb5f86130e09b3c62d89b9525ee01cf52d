@@ -1,0 +1,12 @@
+// 1.20.1	2023-08-24T18:40:27.0750528	Loot Tables
+16726d112cea30533574fec30d1a20a05010f99b data/steelmod/loot_tables/blocks/iron_disulfide.json
+9c01da393f7510db99a30a5d7b8ee6ff31ca7587 data/steelmod/loot_tables/blocks/steel_block.json
+4831903263d26f19fc8c1aa33d3450074886b3d2 data/steelmod/loot_tables/blocks/steel_button.json
+b94968cb9db4632052f346e084c4b7e56a6a71a6 data/steelmod/loot_tables/blocks/steel_door.json
+19035f300cad2224c751819c6b75ee39603a13e2 data/steelmod/loot_tables/blocks/steel_fence.json
+6c2d16ef81b267f160c98a1fc96ce6d7e34baeb1 data/steelmod/loot_tables/blocks/steel_fence_gate.json
+530d83d00cb42c56b13c2a67f4799198585570ed data/steelmod/loot_tables/blocks/steel_pressure_plate.json
+54e05b3cb7bad66c4cf577d6d82aa9c1ed44e705 data/steelmod/loot_tables/blocks/steel_slab.json
+d587c6986b615b5c7b5258122f6dc4b0422220de data/steelmod/loot_tables/blocks/steel_stairs.json
+0a70734054373fe36672f2993a63d675b32c318e data/steelmod/loot_tables/blocks/steel_trap_door.json
+1a0e0b74a1e8224729781387d2c8dc8f0335447e data/steelmod/loot_tables/blocks/steel_wall.json

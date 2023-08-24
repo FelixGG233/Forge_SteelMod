@@ -28,6 +28,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.IRONDISULFIDE.get(),
                 block -> createCopperLikeOreDrops(ModBlocks.IRONDISULFIDE.get(), ModItems.RAWIRONDISULFIDE.get()));
+
+        this.dropSelf(ModBlocks.STEELSTAIRS.get());
+        this.dropSelf(ModBlocks.STEELWALL.get());
+        this.dropSelf(ModBlocks.STEELFENCE.get());
+        this.dropSelf(ModBlocks.STEELTRAPDOOR.get());
+        this.dropSelf(ModBlocks.STEELFENCEGATE.get());
+        this.dropSelf(ModBlocks.STEELBUTTON.get());
+        this.dropSelf(ModBlocks.STEELPRESSUREPLATE.get());
+
+        this.add(ModBlocks.STEELSLAB.get(),
+                block -> createSlabItemTable(ModBlocks.STEELSLAB.get()));
+
+        this.add(ModBlocks.STEELDOOR.get(),
+                block -> createDoorTable(ModBlocks.STEELDOOR.get()));
     }
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "steelmod:block/steel_slab"
+    },
+    "type=double": {
+      "model": "steelmod:block/steel_block"
+    },
+    "type=top": {
+      "model": "steelmod:block/steel_slab_top"
+    }
+  }
+}
