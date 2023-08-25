@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "`": {
+      "item": "steelmod:steel_ingot"
+    }
+  },
+  "pattern": [
+    "`  ",
+    "`` ",
+    "```"
+  ],
+  "result": {
+    "count": 6,
+    "item": "steelmod:steel_stairs"
+  },
+  "show_notification": true
+}

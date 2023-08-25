@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "steelmod:steel_stick"
+    },
+    "`": {
+      "item": "steelmod:steel_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "`#`",
+    "`#`"
+  ],
+  "result": {
+    "count": 3,
+    "item": "steelmod:steel_fence"
+  },
+  "show_notification": true
+}

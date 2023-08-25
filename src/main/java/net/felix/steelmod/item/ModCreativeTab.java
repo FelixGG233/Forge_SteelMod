@@ -22,7 +22,7 @@ public class ModCreativeTab {
                         pOutput.accept(ModItems.STEELINGOT.get());
                         pOutput.accept(ModItems.STEELNUGGET.get());
                         pOutput.accept(ModBlocks.STEELBUTTON.get());
-
+                        pOutput.accept(ModItems.STEELSTICK.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> INGREDIENT_TAB = CREATIVE_MODE_TABS.register("ingredient_tab",

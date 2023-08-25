@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "`": {
+      "item": "steelmod:steel_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "   ",
+    "`` "
+  ],
+  "result": {
+    "item": "steelmod:steel_pressure_plate"
+  },
+  "show_notification": true
+}

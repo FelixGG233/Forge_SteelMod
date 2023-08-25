@@ -23,7 +23,8 @@ public class ModItems {
             () -> new MetalDetectorItem(new Item.Properties().durability(100)));
     public static final RegistryObject<Item> COKE = ITEMS.register("coke",
             () -> new FuelItem(new Item.Properties(), 400));
-
+    public static final RegistryObject<Item> STEELSTICK = ITEMS.register("steel_stick",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword",
             () -> new SwordItem(ModToolTiers.STEEL, 8,2,new Item.Properties()));
     public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe",

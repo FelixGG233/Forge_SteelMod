@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "`": {
+      "item": "steelmod:steel_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    " ` ",
+    " ` "
+  ],
+  "result": {
+    "count": 2,
+    "item": "steelmod:steel_stick"
+  },
+  "show_notification": true
+}

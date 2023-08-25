@@ -4,12 +4,18 @@
   "item.steelmod.raw_iron_disulfide": "Raw Iron Disulfide",
   "item.steelmod.metal_detector": "Metal Detector",
   "item.steelmod.coke": "Coke",
+  "item.steelmod.steel_stick": "Steel Stick",
 
   "item.steelmod.steel_sword": "Steel Sword",
   "item.steelmod.steel_pickaxe": "Steel Pickaxe",
   "item.steelmod.steel_axe": "Steel Axe",
   "item.steelmod.steel_shovel": "Steel Shovel",
   "item.steelmod.steel_hoe": "Steel Hoe",
+
+  "item.steelmod.steel_helmet": "Steel Helmet",
+  "item.steelmod.steel_chestplate": "Steel Chestplate",
+  "item.steelmod.steel_leggings": "Steel Leggings",
+  "item.steelmod.steel_boots": "Steel Boots",
 
   "block.steelmod.steel_block": "Block of Steel",
   "block.steelmod.iron_disulfide": "Iron Disulfide",
