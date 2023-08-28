@@ -1,0 +1,145 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "steelmod:item/handle_texture",
+		"1": "steelmod:item/main_hammer_texture",
+		"2": "steelmod:item/top_texture",
+		"3": "steelmod:item/hammer_front_texture",
+		"particle": "handle_texture"
+	},
+	"elements": [
+		{
+			"name": "handle",
+			"from": [7.25, 0, 7.25],
+			"to": [8.75, 10, 8.75],
+			"faces": {
+				"north": {"uv": [0, 0, 2, 10], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 10], "texture": "#0"},
+				"south": {"uv": [4, 0, 6, 10], "texture": "#0"},
+				"west": {"uv": [6, 0, 8, 10], "texture": "#0"},
+				"up": {"uv": [10, 2, 8, 0], "texture": "#0"},
+				"down": {"uv": [10, 2, 8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "main hammer",
+			"from": [5.5, 10, 3],
+			"to": [10.5, 15, 13],
+			"faces": {
+				"north": {"uv": [2.5, 5, 5, 7.5], "texture": "#1"},
+				"east": {"uv": [0, 0, 5, 2.5], "texture": "#1"},
+				"south": {"uv": [5, 5, 7.5, 7.5], "texture": "#1"},
+				"west": {"uv": [0, 2.5, 5, 5], "texture": "#1"},
+				"up": {"uv": [2.5, 10, 0, 5], "texture": "#1"},
+				"down": {"uv": [7.5, 0, 5, 5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "top",
+			"from": [7, 15, 7],
+			"to": [9, 15.5, 9],
+			"faces": {
+				"north": {"uv": [2, 0, 4, 1], "texture": "#2"},
+				"east": {"uv": [2, 1, 4, 2], "texture": "#2"},
+				"south": {"uv": [2, 2, 4, 3], "texture": "#2"},
+				"west": {"uv": [2, 3, 4, 4], "texture": "#2"},
+				"up": {"uv": [2, 2, 0, 0], "texture": "#2"},
+				"down": {"uv": [2, 2, 0, 4], "texture": "#2"}
+			}
+		},
+		{
+			"from": [5.75, 10.25, 2.5],
+			"to": [10.25, 14.75, 3],
+			"faces": {
+				"north": {"uv": [0, 0, 5, 5], "texture": "#3"},
+				"east": {"uv": [9, 0, 10, 5], "texture": "#3"},
+				"south": {"uv": [0, 5, 5, 10], "texture": "#3"},
+				"west": {"uv": [0, 10, 1, 15], "texture": "#3"},
+				"up": {"uv": [14, 6, 9, 5], "texture": "#3"},
+				"down": {"uv": [14, 6, 9, 7], "texture": "#3"}
+			}
+		},
+		{
+			"from": [6.25, 10.75, 2],
+			"to": [9.75, 14.25, 2.75],
+			"faces": {
+				"north": {"uv": [5, 0, 9, 4], "texture": "#3"},
+				"east": {"uv": [10, 0, 11, 4], "texture": "#3"},
+				"south": {"uv": [5, 4, 9, 8], "texture": "#3"},
+				"west": {"uv": [1, 10, 2, 14], "texture": "#3"},
+				"up": {"uv": [13, 8, 9, 7], "texture": "#3"},
+				"down": {"uv": [14, 4, 10, 5], "texture": "#3"}
+			}
+		},
+		{
+			"from": [6.75, 11.25, 1.5],
+			"to": [9.25, 13.75, 2],
+			"faces": {
+				"north": {"uv": [5, 8, 8, 11], "texture": "#3"},
+				"east": {"uv": [4, 10, 5, 13], "texture": "#3"},
+				"south": {"uv": [8, 8, 11, 11], "texture": "#3"},
+				"west": {"uv": [5, 11, 6, 14], "texture": "#3"},
+				"up": {"uv": [14, 3, 11, 2], "texture": "#3"},
+				"down": {"uv": [14, 3, 11, 4], "texture": "#3"}
+			}
+		},
+		{
+			"from": [7.25, 11.75, 1],
+			"to": [8.75, 13.25, 1.5],
+			"faces": {
+				"north": {"uv": [2, 10, 4, 12], "texture": "#3"},
+				"east": {"uv": [6, 11, 7, 13], "texture": "#3"},
+				"south": {"uv": [11, 0, 13, 2], "texture": "#3"},
+				"west": {"uv": [7, 11, 8, 13], "texture": "#3"},
+				"up": {"uv": [10, 12, 8, 11], "texture": "#3"},
+				"down": {"uv": [13, 8, 11, 9], "texture": "#3"}
+			}
+		},
+		{
+			"from": [7.75, 12.25, 0.5],
+			"to": [8.25, 12.75, 1],
+			"faces": {
+				"north": {"uv": [11, 9, 12, 10], "texture": "#3"},
+				"east": {"uv": [10, 11, 11, 12], "texture": "#3"},
+				"south": {"uv": [11, 10, 12, 11], "texture": "#3"},
+				"west": {"uv": [11, 11, 12, 12], "texture": "#3"},
+				"up": {"uv": [3, 13, 2, 12], "texture": "#3"},
+				"down": {"uv": [4, 12, 3, 13], "texture": "#3"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 2, 1.25]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 2.25, 1.5]
+		},
+		"firstperson_righthand": {
+			"translation": [-0.75, 2, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [-0.25, 1.75, 0]
+		},
+		"ground": {
+			"rotation": [90, 0, 0]
+		},
+		"gui": {
+			"rotation": [0, -90, 0]
+		},
+		"fixed": {
+			"rotation": [0, 90, 0]
+		}
+	},
+	"groups": [
+		0,
+		1,
+		2,
+		{
+			"name": "hammer head",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [3, 4, 5, 6, 7]
+		}
+	]
+}

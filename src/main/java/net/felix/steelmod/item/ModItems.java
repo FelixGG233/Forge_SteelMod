@@ -1,6 +1,7 @@
 package net.felix.steelmod.item;
 
 import net.felix.steelmod.SteelMod;
+import net.felix.steelmod.block.ModBlocks;
 import net.felix.steelmod.item.custom.FuelItem;
 import net.felix.steelmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.*;
@@ -8,6 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -45,7 +47,12 @@ public class ModItems {
     public static final RegistryObject<Item> STEEL_BOOTS = ITEMS.register("steel_boots",
             () -> new ArmorItem(ModArmorMaterials.STEEL, ArmorItem.Type.BOOTS,new Item.Properties()));
 
+    public static final RegistryObject<Item> STEELHAMMER = ITEMS.register("steel_hammer",
+            () -> new Item(new Item.Properties().stacksTo(1)));
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
+
 }

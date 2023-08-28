@@ -32,6 +32,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(((DoorBlock) ModBlocks.STEELDOOR.get()), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.STEELTRAPDOOR.get()), modLoc("block/steel_trap_door"), true, "cutout");
+
+        
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

@@ -42,6 +42,10 @@ public class Config
     public static int magicNumber;
     public static String magicNumberIntroduction;
     public static Set<Item> items;
+    public static ForgeConfigSpec.BooleanValue showErrors;
+    public static ForgeConfigSpec.IntValue cache_capacity;
+    public static ForgeConfigSpec.IntValue furnaceEnergyCapacityTier2;
+    public static ForgeConfigSpec.BooleanValue disableLightupdates;
 
     private static boolean validateItemName(final Object obj)
     {
@@ -59,5 +63,14 @@ public class Config
         items = ITEM_STRINGS.get().stream()
                 .map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName)))
                 .collect(Collectors.toSet());
+    }
+    static {
+        showErrors = BUILDER
+                .comment(" Show furnace settings errors in chat, used for debugging").define("misc.errors", false);
+        cache_capacity = BUILDER
+                .comment(" The capacity of the recipe cache, higher values use more memory.\n Default: 10")
+                .defineInRange("recipe_cache", 10, 1, 100);
+        disableLightupdates = BUILDER
+                .comment(" Enable or disable light-updates, furances will no longer emit light, true = disable").define("misc.lightupdates", false);
     }
 }

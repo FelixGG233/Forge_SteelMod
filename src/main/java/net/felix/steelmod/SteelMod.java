@@ -1,6 +1,7 @@
 package net.felix.steelmod;
 
 import com.mojang.logging.LogUtils;
+
 import net.felix.steelmod.block.ModBlocks;
 import net.felix.steelmod.item.ModCreativeTab;
 import net.felix.steelmod.item.ModItems;
@@ -26,7 +27,7 @@ public class SteelMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "steelmod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
 
     public SteelMod()
@@ -44,10 +45,13 @@ public class SteelMod
         MinecraftForge.EVENT_BUS.register(this);
 
 
+
         modEventBus.addListener(this::addCreative);
 
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

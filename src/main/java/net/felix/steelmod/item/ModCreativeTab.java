@@ -23,6 +23,7 @@ public class ModCreativeTab {
                         pOutput.accept(ModItems.STEELNUGGET.get());
                         pOutput.accept(ModBlocks.STEELBUTTON.get());
                         pOutput.accept(ModItems.STEELSTICK.get());
+
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> INGREDIENT_TAB = CREATIVE_MODE_TABS.register("ingredient_tab",
@@ -59,6 +60,7 @@ public class ModCreativeTab {
                         pOutput.accept(ModItems.STEEL_AXE.get());
                         pOutput.accept(ModItems.STEEL_SHOVEL.get());
                         pOutput.accept(ModItems.STEEL_HOE.get());
+                        pOutput.accept(ModItems.STEELHAMMER.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> ORES_TAB = CREATIVE_MODE_TABS.register("ore_tab",
