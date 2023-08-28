@@ -46,8 +46,8 @@ public class ModCreativeTab {
                         pOutput.accept(ModBlocks.STEELFENCE.get());
                         pOutput.accept(ModBlocks.STEELWALL.get());
                         pOutput.accept(ModBlocks.STEELTRAPDOOR.get());
-
                         pOutput.accept(ModBlocks.STEELPRESSUREPLATE.get());
+                        pOutput.accept(ModBlocks.STEEL_CHEST_BLOCK.get());
                     })
                     .build());
     public static final RegistryObject<CreativeModeTab> TOOLS_TAB = CREATIVE_MODE_TABS.register("tool_tab",

@@ -5,11 +5,14 @@ import net.felix.steelmod.block.ModBlocks;
 import net.felix.steelmod.item.custom.FuelItem;
 import net.felix.steelmod.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
+
+import java.util.function.Supplier;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -49,6 +52,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> STEELHAMMER = ITEMS.register("steel_hammer",
             () -> new Item(new Item.Properties().stacksTo(1)));
+
+
 
 
     public static void register(IEventBus eventBus){

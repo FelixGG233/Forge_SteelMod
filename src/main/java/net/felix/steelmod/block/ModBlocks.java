@@ -3,21 +3,19 @@ package net.felix.steelmod.block;
 import net.felix.steelmod.SteelMod;
 
 
+import net.felix.steelmod.block.custom.MetalPressureBlock;
+import net.felix.steelmod.block.chest.SteelChestBlock;
 import net.felix.steelmod.item.ModItems;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.client.model.obj.ObjMaterialLibrary;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -31,7 +29,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, SteelMod.MOD_ID);
 
     public static final RegistryObject<Block> STEELBLOCK = registerBlock("steel_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6.0f,7.0f)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(10.0f,10.0f)));
     public static final RegistryObject<Block> IRONDISULFIDE = registerBlock("iron_disulfide",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)
                     .requiresCorrectToolForDrops(), UniformInt.of(1,5)));
@@ -56,6 +54,12 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6.0f,7.0f).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> STEELTRAPDOOR = registerBlock("steel_trap_door",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(6.0f,7.0f).noOcclusion(), BlockSetType.IRON));
+
+    public static final RegistryObject<MetalPressureBlock> METAL_PRESS_BLOCK = BLOCKS.register("metal_press_block",
+            () -> new MetalPressureBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .mapColor(MapColor.COLOR_RED)
+                    .strength(5.0f,15f)
+            ));
 
 
 
