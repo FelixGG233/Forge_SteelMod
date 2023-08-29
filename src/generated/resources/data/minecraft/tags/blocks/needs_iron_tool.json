@@ -8,6 +8,8 @@
     "steelmod:steel_wall",
     "steelmod:steel_stairs",
     "steelmod:steel_fence_gate",
-    "steelmod:steel_door"
+    "steelmod:steel_door",
+    "steelmod:steel_chest",
+    "steelmod:trapped_steel_chest"
   ]
 }

@@ -2,16 +2,25 @@ package net.felix.steelmod;
 
 import com.mojang.logging.LogUtils;
 
-import net.felix.steelmod.block.ModBlocks;
-import net.felix.steelmod.item.ModCreativeTab;
-import net.felix.steelmod.item.ModItems;
+import net.felix.steelmod.client.render.SteelChestRenderer;
+import net.felix.steelmod.client.screen.SteelChestScreen;
+import net.felix.steelmod.common.block.ModBlocks;
+import net.felix.steelmod.common.block.chest.entity.ModBlockEntityTypes;
+import net.felix.steelmod.common.inventory.SteelChestContainerTypes;
+import net.felix.steelmod.common.item.ModCreativeTab;
+import net.felix.steelmod.common.item.ModItems;
+import net.felix.steelmod.common.network.SteelChestNetWork;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -34,24 +43,37 @@ public class SteelMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
-
-        ModBlocks.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
 
-        ModCreativeTab.register(modEventBus);
+
+
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+            // Client setup
+            modEventBus.addListener(this::setupClient);
+        });
 
         MinecraftForge.EVENT_BUS.register(this);
 
-
-
         modEventBus.addListener(this::addCreative);
-
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
+        SteelChestNetWork.setup();
 
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModBlockEntityTypes.BLOCK_ENTITIES.register(modEventBus);
+        SteelChestContainerTypes.CONTAINERS.register(modEventBus);
+        ModCreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    private void setupClient(final FMLClientSetupEvent event){
+        MenuScreens.register(SteelChestContainerTypes.STEEL_CHEST.get(), SteelChestScreen::new);
+
+        BlockEntityRenderers.register(ModBlockEntityTypes.STEEL_CHEST.get(), SteelChestRenderer::new);
+
+        BlockEntityRenderers.register(ModBlockEntityTypes.TRAPPED_STEEL_CHEST.get(), SteelChestRenderer::new);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -90,4 +112,6 @@ public class SteelMod
 
         }
     }
+
+
 }

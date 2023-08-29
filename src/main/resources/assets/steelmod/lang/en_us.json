@@ -31,6 +31,9 @@
   "block.steelmod.steel_door": "Steel Door",
   "block.steelmod.steel_trap_door": "Steel Trap Door",
 
+  "block.steelmod.steel_chest" : "Steel Chest",
+  "block.steelmod.trapped_steel_chest" : "Trapped Steel Chest",
+
   "creativetab.ingredient_tab": "Felix's Steel Mod Ingredients",
   "creativetab.block_tab": "Felix's Steel Mod Blocks",
   "creativetab.ore_tab": "Felix's Steel Mod Ores",
