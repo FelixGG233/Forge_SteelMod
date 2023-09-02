@@ -3,16 +3,15 @@ package net.felix.steelmod.client.render;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import it.unimi.dsi.fastutil.floats.Float2BooleanFunction;
 import it.unimi.dsi.fastutil.floats.Float2FloatFunction;
 import it.unimi.dsi.fastutil.ints.Int2IntFunction;
-import net.felix.steelmod.ClientEvents;
-import net.felix.steelmod.common.block.SteelChestType;
-import net.felix.steelmod.common.block.chest.regular.AbstractSteelChestBlock;
-import net.felix.steelmod.common.block.chest.regular.entity.AbstractSteelChestBlockEntity;
-import net.felix.steelmod.common.block.chest.trapped.entity.trapped.AbstractTrappedSteelChestBlockEntity;
-import net.felix.steelmod.client.model.SteelChestModels;
+import net.felix.steelmod.ModClientEvents;
+import net.felix.steelmod.client.model.SteelChestModel;
 import net.felix.steelmod.client.model.inventory.ModelItem;
-import net.minecraft.client.Minecraft;
+import net.felix.steelmod.common.block.ModChestTypes;
+import net.felix.steelmod.common.block.custom.AbstractModChestBlock;
+import net.felix.steelmod.common.block.entity.AbstractModChestBlockEntity;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.CubeListBuilder;
@@ -26,11 +25,8 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BrightnessCombiner;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoubleBlockCombiner;
@@ -64,8 +60,8 @@ public class SteelChestRenderer<T extends BlockEntity & LidBlockEntity> implemen
             new ModelItem(new Vector3f(0.5F, 0.32F, 0.5F), 3.0F)
     );
 
-    public SteelChestRenderer(BlockEntityRendererProvider.Context context) {
-        ModelPart modelPart = context.bakeLayer(ClientEvents.STEEL_CHEST);
+    public SteelChestRenderer(BlockEntityRendererProvider.Context context){
+        ModelPart modelPart = context.bakeLayer(ModClientEvents.STEEL_CHEST);
 
         this.renderer = context.getBlockEntityRenderDispatcher();
         this.bottom = modelPart.getChild("iron_bottom");
@@ -85,58 +81,55 @@ public class SteelChestRenderer<T extends BlockEntity & LidBlockEntity> implemen
     }
 
     @Override
-    public void render(T tileEntityIn, float partialTicks, PoseStack poseStack, MultiBufferSource bufferSource, int combinedLightIn, int combinedOverlayIn){
-        AbstractSteelChestBlockEntity tileEntity = (AbstractSteelChestBlockEntity) tileEntityIn;
+    public void render(T tileEntityIn, float partialTick, PoseStack poseStack, MultiBufferSource bufferSource, int combinedLightIn, int combinedOverlayIn) {
+        AbstractModChestBlockEntity tileEntity = (AbstractModChestBlockEntity) tileEntityIn;
 
         Level level = tileEntity.getLevel();
         boolean useTileEntityBlockState = level != null;
 
-        BlockState blockState = useTileEntityBlockState ? tileEntity.getBlockState() : (BlockState) tileEntity.getBlockToUse().defaultBlockState().setValue(AbstractSteelChestBlock.FACING, Direction.NORTH);
+        BlockState blockState = useTileEntityBlockState ? tileEntity.getBlockState() : (BlockState) tileEntity.getBlockToUse().defaultBlockState().setValue(AbstractModChestBlock.FACING, Direction.SOUTH);
         Block block = blockState.getBlock();
-        SteelChestType chestType = SteelChestType.STEEL;
-        SteelChestType actualType = AbstractSteelChestBlock.getTypeFromBlock(block);
+        ModChestTypes chestType = ModChestTypes.STEEL;
+        ModChestTypes actualType = AbstractModChestBlock.getTypeFromBlock(block);
 
         if (actualType != null){
             chestType = actualType;
         }
 
-        if (block instanceof AbstractSteelChestBlock abstractSteelChestBlock){
+        if (block instanceof AbstractModChestBlock abstractModChestBlock){
             poseStack.pushPose();
 
-            float f = blockState.getValue(AbstractSteelChestBlock.FACING).toYRot();
+            float f =blockState.getValue(AbstractModChestBlock.FACING).toYRot();
 
             poseStack.translate(0.5D, 0.5D, 0.5D);
             poseStack.mulPose(Axis.YP.rotationDegrees(-f));
             poseStack.translate(-0.5D, -0.5D, -0.5D);
 
-            DoubleBlockCombiner.NeighborCombineResult<? extends AbstractSteelChestBlockEntity> neighborCombineResult;
+            DoubleBlockCombiner.NeighborCombineResult<? extends AbstractModChestBlockEntity> neighborCombineResult;
 
             if (useTileEntityBlockState){
-                neighborCombineResult = abstractSteelChestBlock.combine(blockState, level, tileEntityIn.getBlockPos(), true);
+                neighborCombineResult = abstractModChestBlock.combine(blockState, level, tileEntityIn.getBlockPos(), true);
             }else {
                 neighborCombineResult = DoubleBlockCombiner.Combiner::acceptNone;
             }
 
-            float openness = neighborCombineResult.<Float2FloatFunction>apply(AbstractSteelChestBlock.opennessCombiner(tileEntity)).get(partialTicks);
+            float openness = neighborCombineResult.<Float2FloatFunction>apply(AbstractModChestBlock.opennessCombiner(tileEntity)).get(partialTick);
             openness = 1.0F - openness;
             openness = 1.0F - openness * openness * openness;
 
             int brightness = neighborCombineResult.<Int2IntFunction>apply(new BrightnessCombiner<>()).applyAsInt(combinedLightIn);
 
-            boolean trapped = tileEntityIn instanceof AbstractTrappedSteelChestBlockEntity;
-
-            Material material = new Material(Sheets.CHEST_SHEET, SteelChestModels.chooseChestTexture(chestType, trapped));
+            Material material = new Material(Sheets.CHEST_SHEET, SteelChestModel.chooseChestTexture(chestType));
 
             VertexConsumer vertexConsumer = material.buffer(bufferSource, RenderType::entityCutout);
-
-            this.render(poseStack, vertexConsumer,this.lid, this.lock, this.bottom, openness,brightness, combinedLightIn);
+            this.render(poseStack,vertexConsumer,this.lid,this.lock ,this.bottom, openness, brightness, combinedOverlayIn);
 
             poseStack.popPose();
 
 
         }
-
     }
+
     private void render(PoseStack poseStack, VertexConsumer vertexConsumer, ModelPart lid, ModelPart lock, ModelPart bottom, float openness, int brightness, int combinedOverlayIn){
         lid.xRot = -(openness * ((float) Math.PI / 2F));
         lock.xRot = lid.xRot;
@@ -145,22 +138,4 @@ public class SteelChestRenderer<T extends BlockEntity & LidBlockEntity> implemen
         lock.render(poseStack, vertexConsumer, brightness, combinedOverlayIn);
         bottom.render(poseStack, vertexConsumer, brightness, combinedOverlayIn);
     }
-
-    public static void renderItem(PoseStack matrices, MultiBufferSource buffer, ItemStack item, ModelItem modelItem, float rotation, int light){
-        if (item.isEmpty()) return;
-
-        matrices.pushPose();
-        Vector3f center = modelItem.getCenter();
-        matrices.translate(center.x(), center.y(), center.z());
-
-        matrices.mulPose(Axis.YP.rotationDegrees(rotation));
-
-        float scale = modelItem.getSizeScaled();
-        matrices.scale(scale, scale, scale);
-
-        Minecraft.getInstance().getItemRenderer().renderStatic(item, ItemDisplayContext.NONE, light, OverlayTexture.NO_OVERLAY, matrices, buffer, null, 0);
-
-        matrices.popPose();
-    }
-
 }

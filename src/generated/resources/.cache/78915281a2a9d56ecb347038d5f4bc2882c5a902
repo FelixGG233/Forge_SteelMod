@@ -1,8 +1,8 @@
-// 1.20.1	2023-08-29T18:25:56.8879635	Tags for minecraft:block mod id steelmod
+// 1.20.1	2023-08-31T16:34:39.0996858	Tags for minecraft:block mod id steelmod
 71e453e7f5fe9bae011c4d121d7118f80e5a3804 data/minecraft/tags/blocks/fences.json
 ce3df80f9e622d1dd558af95b7e617da0e5bd3d7 data/minecraft/tags/blocks/fence_gates.json
 7cb75e83dc05dd7bb5230b9253e0c13263462327 data/minecraft/tags/blocks/mineable/pickaxe.json
-5497002c9bbbe6033cd924bab6280a6fc170dfea data/minecraft/tags/blocks/needs_iron_tool.json
+3d798e551f1504fde24ac94a7dabc1e9cfb5ed45 data/minecraft/tags/blocks/needs_iron_tool.json
 21842102d0cc59fd8544d7840c9ae4f886c2f4d2 data/minecraft/tags/blocks/walls.json
 6e0318cd559cb6816d255628deeb737367e39fc8 data/steelmod/tags/blocks/metal_detector_valuables.json
-5497002c9bbbe6033cd924bab6280a6fc170dfea data/steelmod/tags/blocks/needs_steel_tool.json
+3d798e551f1504fde24ac94a7dabc1e9cfb5ed45 data/steelmod/tags/blocks/needs_steel_tool.json

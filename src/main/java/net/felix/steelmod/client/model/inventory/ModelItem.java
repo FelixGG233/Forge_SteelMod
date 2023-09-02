@@ -1,7 +1,6 @@
 package net.felix.steelmod.client.model.inventory;
 
 import org.joml.Vector3f;
-import org.joml.Vector3fc;
 
 public class ModelItem {
     private final Vector3f center;
@@ -17,10 +16,6 @@ public class ModelItem {
         this.size = size;
     }
 
-    /**
-     * Gets the center for rendering this item, scaled for renderer
-     * @return Scaled center
-     */
     public Vector3f getCenterScaled() {
         if (centerScaled == null) {
             centerScaled = new Vector3f(center);

@@ -1,8 +1,8 @@
 package net.felix.steelmod.client.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.felix.steelmod.common.block.SteelChestType;
-import net.felix.steelmod.common.inventory.SteelChestMenu;
+import net.felix.steelmod.common.block.ModChestTypes;
+import net.felix.steelmod.common.block.inventory.ModChestMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.screens.inventory.MenuAccess;
@@ -13,12 +13,11 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class    SteelChestScreen extends AbstractContainerScreen<SteelChestMenu> implements MenuAccess<SteelChestMenu> {
-    private final SteelChestType chestType;
+public class SteelChestScreen extends AbstractContainerScreen<ModChestMenu> implements MenuAccess<ModChestMenu> {
+    private final ModChestTypes chestType;
     private final int textureXSize;
     private final int textureYSize;
-
-    public SteelChestScreen(SteelChestMenu container, Inventory playerInventory, Component title) {
+    public SteelChestScreen(ModChestMenu container, Inventory playerInventory, Component title) {
         super(container, playerInventory, title);
 
         this.chestType = container.getChestType();
@@ -29,9 +28,9 @@ public class    SteelChestScreen extends AbstractContainerScreen<SteelChestMenu>
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         this.renderBackground(guiGraphics);
-        super.render(guiGraphics, mouseX, mouseY, partialTicks);
+        super.render(guiGraphics, mouseX, mouseY, partialTick);
         this.renderTooltip(guiGraphics, mouseX, mouseY);
     }
 
@@ -43,9 +42,9 @@ public class    SteelChestScreen extends AbstractContainerScreen<SteelChestMenu>
     }
 
     @Override
-    protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
+    protected void renderBg(GuiGraphics guiGraphics, float partialTick, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
         RenderSystem.setShaderTexture(0, this.chestType.guiTexture);
 
         int x = (this.width - this.imageWidth) / 2;
@@ -54,4 +53,3 @@ public class    SteelChestScreen extends AbstractContainerScreen<SteelChestMenu>
         guiGraphics.blit(this.chestType.guiTexture, x, y, 0, 0, this.imageWidth, this.imageHeight, this.textureXSize, this.textureYSize);
     }
 }
-

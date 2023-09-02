@@ -2,14 +2,9 @@ package net.felix.steelmod;
 
 import com.mojang.logging.LogUtils;
 
-import net.felix.steelmod.client.render.SteelChestRenderer;
-import net.felix.steelmod.client.screen.SteelChestScreen;
 import net.felix.steelmod.common.block.ModBlocks;
-import net.felix.steelmod.common.block.chest.entity.ModBlockEntityTypes;
-import net.felix.steelmod.common.inventory.SteelChestContainerTypes;
 import net.felix.steelmod.common.item.ModCreativeTab;
 import net.felix.steelmod.common.item.ModItems;
-import net.felix.steelmod.common.network.SteelChestNetWork;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -58,22 +53,19 @@ public class SteelMod
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        SteelChestNetWork.setup();
+
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-        ModBlockEntityTypes.BLOCK_ENTITIES.register(modEventBus);
-        SteelChestContainerTypes.CONTAINERS.register(modEventBus);
+
         ModCreativeTab.CREATIVE_MODE_TABS.register(modEventBus);
     }
 
+
+
     @OnlyIn(Dist.CLIENT)
     private void setupClient(final FMLClientSetupEvent event){
-        MenuScreens.register(SteelChestContainerTypes.STEEL_CHEST.get(), SteelChestScreen::new);
 
-        BlockEntityRenderers.register(ModBlockEntityTypes.STEEL_CHEST.get(), SteelChestRenderer::new);
-
-        BlockEntityRenderers.register(ModBlockEntityTypes.TRAPPED_STEEL_CHEST.get(), SteelChestRenderer::new);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

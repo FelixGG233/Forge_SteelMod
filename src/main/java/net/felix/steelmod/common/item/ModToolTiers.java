@@ -1,7 +1,7 @@
 package net.felix.steelmod.common.item;
 
 import net.felix.steelmod.SteelMod;
-import net.felix.steelmod.common.util.ModTags;
+import net.felix.steelmod.common.utils.ModTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;

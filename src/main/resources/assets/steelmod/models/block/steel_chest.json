@@ -1,6 +1,5 @@
 {
   "textures": {
-    "particle": "steelmod:block/steel_break",
-    "texture": "steelmod:models/steel_chest"
+    "particle": "steelmod:block/steel_break"
   }
 }

@@ -2,7 +2,7 @@ package net.felix.steelmod.common.datagen;
 
 import net.felix.steelmod.SteelMod;
 import net.felix.steelmod.common.block.ModBlocks;
-import net.felix.steelmod.common.util.ModTags;
+import net.felix.steelmod.common.utils.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -34,9 +34,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.STEELSTAIRS.get(),
                         ModBlocks.STEELFENCEGATE.get(),
                         ModBlocks.STEELDOOR.get(),
+                        ModBlocks.STEEL_COVERED_BRICK.get()
 
-                        ModBlocks.STEEL_CHEST.get(),
-                        ModBlocks.TRAPPED_STEEL_CHEST.get()
 
                 );
         this.tag(ModTags.Blocks.NEEDS_STEEL_TOOL)
@@ -50,8 +49,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.STEELSTAIRS.get(),
                         ModBlocks.STEELFENCEGATE.get(),
                         ModBlocks.STEELDOOR.get(),
-                        ModBlocks.STEEL_CHEST.get(),
-                        ModBlocks.TRAPPED_STEEL_CHEST.get()
+                        ModBlocks.STEEL_COVERED_BRICK.get()
+
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)

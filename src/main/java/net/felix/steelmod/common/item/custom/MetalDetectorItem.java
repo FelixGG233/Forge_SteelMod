@@ -1,6 +1,6 @@
 package net.felix.steelmod.common.item.custom;
 
-import net.felix.steelmod.common.util.ModTags;
+import net.felix.steelmod.common.utils.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

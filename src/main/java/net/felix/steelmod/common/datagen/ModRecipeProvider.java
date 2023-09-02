@@ -206,14 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private void addChestsRecipes(Consumer<FinishedRecipe> consumer) {
         String folder = "chests/";
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.STEEL_CHEST.get())
-                .pattern("MMM")
-                .pattern("MSM")
-                .pattern("MMM")
-                .define('M', ModItems.STEELINGOT.get())
-                .define('S', Tags.Items.CHESTS_WOODEN)
-                .unlockedBy(getHasName(ModItems.STEELINGOT.get()), has(ModItems.STEELINGOT.get()))
-                .save(consumer, location(folder + "vanilla_steel_chest"));
+
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

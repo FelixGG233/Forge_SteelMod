@@ -1,5 +1,4 @@
-// 1.20.1	2023-08-29T18:25:56.8889613	Recipes
-b90c22889bd4d02be3b440d9718584fc46fc0511 data/steelmod/advancements/recipes/decorations/chests/vanilla_steel_chest.json
+// 1.20.1	2023-08-31T16:34:39.1006689	Recipes
 0c3a1e2fa89f74a98e27230a4e7f6960e6b759de data/steelmod/advancements/recipes/misc/coke_from_blasting_charcoal.json
 5f108685bbfbeef63e7bccd0e55ad939b3876f2a data/steelmod/advancements/recipes/misc/coke_from_blasting_coke.json
 445dc69f29327250a32d8581a8b4f15cb1356aee data/steelmod/advancements/recipes/misc/iron_ingot_from_blasting_iron_disulfide.json
@@ -32,7 +31,6 @@ b0bc6311431555cce5203b9d4422d8ebc1c08c5d data/steelmod/advancements/recipes/misc
 e36f34918e44356a39d7d0f3ba67c07a94f51d77 data/steelmod/advancements/recipes/misc/steel_sword.json
 33e2707006f911b3e483afb3c676c16a4ca5352c data/steelmod/advancements/recipes/misc/steel_trap_door.json
 a9132d9463195139466908b5c57af3346a40d50e data/steelmod/advancements/recipes/misc/steel_wall.json
-f436314d74586554d4f82c6f9235df67ecd061b5 data/steelmod/recipes/chests/vanilla_steel_chest.json
 48c115ab66743a0d08393a80f59f422f099eba87 data/steelmod/recipes/coke_from_blasting_charcoal.json
 d7ecbb43a738cceccb1839aef1fb4a41f1e3d326 data/steelmod/recipes/coke_from_blasting_coke.json
 38bea9fe9979cbe8484c8286f24c94abbdbe2485 data/steelmod/recipes/iron_ingot_from_blasting_iron_disulfide.json
