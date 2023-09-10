@@ -36,6 +36,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STEELBUTTON.get());
         this.dropSelf(ModBlocks.STEELPRESSUREPLATE.get());
 
+        this.dropSelf(ModBlocks.STEEL_CHEST.get());
         this.dropSelf(ModBlocks.STEEL_COVERED_BRICK.get());
 
         this.add(ModBlocks.STEELSLAB.get(),

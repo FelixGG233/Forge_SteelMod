@@ -38,7 +38,7 @@ public class ModChestBlockItem extends BlockItem {
                 Supplier<BlockEntity> modelToUse = null;
 
                 switch (type.get()){
-                    case STEEL -> modelToUse = () -> new SteelChestBlockEntity(BlockPos.ZERO, ModBlocks.STEEL_CHEST.get().defaultBlockState());
+                    default -> modelToUse = () -> new SteelChestBlockEntity(BlockPos.ZERO, ModBlocks.STEEL_CHEST.get().defaultBlockState());
                 }
                 return new ModChestItemStackRenderer<>(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels(), modelToUse);
             }

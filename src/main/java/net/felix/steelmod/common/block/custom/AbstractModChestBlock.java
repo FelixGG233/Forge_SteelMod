@@ -194,11 +194,6 @@ public abstract class AbstractModChestBlock extends BaseEntityBlock implements S
         return chestBlock.combine(blockState, level, blockPos, ignoreBlockedChest).<Optional<Container>>apply(CHEST_COMBINER).orElse((Container) null);
     }
 
-    @Nullable
-    public MenuProvider getMenuProvider(BlockState blockState, Level level, BlockPos blockPos) {
-        return this.combine(blockState, level, blockPos, false).<Optional<MenuProvider>>apply(MENU_PROVIDER_COMBINER).orElse((MenuProvider) null);
-    }
-
     public DoubleBlockCombiner.NeighborCombineResult<? extends AbstractModChestBlockEntity> combine(BlockState blockState, Level level, BlockPos blockPos, boolean ignoreBlockedChest) {
         BiPredicate<LevelAccessor, BlockPos> biPredicate;
 
@@ -210,6 +205,11 @@ public abstract class AbstractModChestBlock extends BaseEntityBlock implements S
             biPredicate = AbstractModChestBlock :: isChestBlockedAt;
         }
         return DoubleBlockCombiner.combineWithNeigbour(this.blockEntityType.get(), AbstractModChestBlock::getBlockType, AbstractModChestBlock :: getConnectedDirection, FACING, blockState, level, blockPos, biPredicate);
+    }
+
+    @Nullable
+    public MenuProvider getMenuProvider(BlockState blockState, Level level, BlockPos blockPos) {
+        return this.combine(blockState, level, blockPos, false).<Optional<MenuProvider>>apply(MENU_PROVIDER_COMBINER).orElse((MenuProvider) null);
     }
 
     public static DoubleBlockCombiner.Combiner<AbstractModChestBlockEntity, Float2FloatFunction> opennessCombiner(final LidBlockEntity lidBlockEntity) {

@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 @Mod.EventBusSubscriber(modid = SteelMod.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SteelChestModel {
 
-    public static final ResourceLocation STEEL_CHEST_LOCATION = new ResourceLocation(SteelMod.MOD_ID, "model/steel_chest");
+    public static final ResourceLocation STEEL_CHEST_LOCATION = new ResourceLocation(SteelMod.MOD_ID, "models/steel_chest");
     public static final ResourceLocation VANILLA_CHEST_LOCATION = new ResourceLocation("entity/chest/normal");
 
     public static ResourceLocation chooseChestTexture(ModChestTypes type){

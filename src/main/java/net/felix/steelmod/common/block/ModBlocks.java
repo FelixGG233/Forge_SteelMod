@@ -28,8 +28,6 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, SteelMod.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ModItems.ITEMS;
 
-
-
     public static final RegistryObject<Block> STEELBLOCK = registerBlock("steel_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(10.0f,10.0f)));
     public static final RegistryObject<Block> IRONDISULFIDE = registerBlock("iron_disulfide",
