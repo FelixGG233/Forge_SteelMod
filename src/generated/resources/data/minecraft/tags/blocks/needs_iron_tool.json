@@ -2,6 +2,7 @@
   "values": [
     "steelmod:iron_disulfide",
     "steelmod:steel_block",
+    "steelmod:steel_blastfurnace_core",
     "steelmod:steel_fence",
     "steelmod:steel_pressure_plate",
     "steelmod:steel_trap_door",
@@ -9,7 +10,6 @@
     "steelmod:steel_stairs",
     "steelmod:steel_fence_gate",
     "steelmod:steel_door",
-    "steelmod:steel_covered_brick",
-    "steelmod:steel_chest"
+    "steelmod:steel_covered_brick"
   ]
 }

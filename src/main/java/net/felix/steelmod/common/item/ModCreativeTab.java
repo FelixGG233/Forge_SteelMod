@@ -47,7 +47,7 @@ public class ModCreativeTab {
                         pOutput.accept(ModBlocks.STEELTRAPDOOR.get());
                         pOutput.accept(ModBlocks.STEELPRESSUREPLATE.get());
                         pOutput.accept(ModBlocks.STEEL_COVERED_BRICK.get());
-                        pOutput.accept(ModBlocks.STEEL_CHEST.get());
+                        pOutput.accept(ModBlocks.STEEL_BLAST_FURNACE_CORE.get());
 
                     })
                     .build());

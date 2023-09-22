@@ -17,6 +17,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.STEELBLOCK);
         blockWithItem(ModBlocks.IRONDISULFIDE);
+        blockWithItem(ModBlocks.STEEL_COVERED_BRICK);
+        blockWithItem(ModBlocks.STEEL_BLAST_FURNACE_CORE);
 
         stairsBlock(((StairBlock) ModBlocks.STEELSTAIRS.get()), blockTexture(ModBlocks.STEELBLOCK.get()));
         slabBlock(((SlabBlock) ModBlocks.STEELSLAB.get()), blockTexture(ModBlocks.STEELBLOCK.get()), blockTexture(ModBlocks.STEELBLOCK.get()));
@@ -31,7 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock) ModBlocks.STEELDOOR.get()), modLoc("block/steel_door_bottom"), modLoc("block/steel_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.STEELTRAPDOOR.get()), modLoc("block/steel_trap_door"), true, "cutout");
 
-        blockWithItem(ModBlocks.STEEL_COVERED_BRICK);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

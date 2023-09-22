@@ -5,9 +5,8 @@ import com.mojang.logging.LogUtils;
 import net.felix.steelmod.common.block.ModBlocks;
 import net.felix.steelmod.common.item.ModCreativeTab;
 import net.felix.steelmod.common.item.ModItems;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,7 +21,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
+import net.minecraftforge.registries.RegistryObject;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SteelMod.MOD_ID)
@@ -31,7 +30,17 @@ public class SteelMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "steelmod";
     // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
+
+    public static Block[] mapRegistryObjectToBlocks(RegistryObject<Block>[] array) {
+        Block[] mapped = new Block[array.length];
+
+        for(int i = 0; i < mapped.length; i++) {
+            mapped[i] = array[i].get();
+        }
+
+        return mapped;
+    }
+
 
 
     public SteelMod()

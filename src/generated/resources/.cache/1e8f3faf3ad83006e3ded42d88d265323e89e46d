@@ -1,5 +1,6 @@
-// 1.20.1	2023-08-31T16:34:39.1046686	Block States: steelmod
+// 1.20.1	2023-09-22T18:12:12.1672327	Block States: steelmod
 928c1c3c475692f1ba4cc1f07ff2c390dd8a963b assets/steelmod/blockstates/iron_disulfide.json
+ef17a4b208453f958b44b1dbdfa28205248290b8 assets/steelmod/blockstates/steel_blastfurnace_core.json
 f7548d7666dec021fdc73df48737e77c9f83acfc assets/steelmod/blockstates/steel_block.json
 1ef9e6314fba6d0d3c7155244ed291dc86ecf8f3 assets/steelmod/blockstates/steel_button.json
 830596adefcb0267e1b946992d52182047ecbcdb assets/steelmod/blockstates/steel_covered_brick.json
@@ -12,6 +13,7 @@ a6d64190f61707b63ecbea971df480231ff81cd1 assets/steelmod/blockstates/steel_slab.
 66503303b3d262a056e64facb8fe1ac50b41ea8c assets/steelmod/blockstates/steel_trap_door.json
 2525a94a2e0cbe1c761d60cd1e78d0240e28e826 assets/steelmod/blockstates/steel_wall.json
 5471635ad2de8ee4b72852d07f1b4cc535ccf6f2 assets/steelmod/models/block/iron_disulfide.json
+8f3c7773d9834529f5d3c41efb02cfabd84023f1 assets/steelmod/models/block/steel_blastfurnace_core.json
 43355f7c88d206f55fcbc6dea8a6da3d42bb6a3d assets/steelmod/models/block/steel_block.json
 4119b4e45ee54394c90e3ee021805309dca797df assets/steelmod/models/block/steel_button.json
 0083fbd61e874e3b09789c6ea9d6df7ac7c8bcfd assets/steelmod/models/block/steel_button_pressed.json
@@ -44,5 +46,6 @@ c6af2c0af01248a3f7defc3abdf1a7f569af66a4 assets/steelmod/models/block/steel_stai
 1f9391a721a9f7d677a27d3ca851185f0e20542b assets/steelmod/models/block/steel_wall_side.json
 29c5e7529ad5cbd0885acc728de4029982f81a6f assets/steelmod/models/block/steel_wall_side_tall.json
 fd2c9aa7f6798aab1e132a80e6a1c4dc19be7bd3 assets/steelmod/models/item/iron_disulfide.json
+ca293398dbd3d04741ed9ec8cd8553abb27ec06f assets/steelmod/models/item/steel_blastfurnace_core.json
 48c78963f51af5a85e6a2e3300b520642f01c0c4 assets/steelmod/models/item/steel_block.json
 b52cae4575759a4f15330efa82bf418f5d1d666d assets/steelmod/models/item/steel_covered_brick.json

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "steelmod:block/steel_blastfurnace_core"
+  }
+}

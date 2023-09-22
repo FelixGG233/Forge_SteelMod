@@ -1,33 +1,33 @@
-[109月2023 17:27:46.324] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\18617\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.44, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, steelmod, --all, --output, C:\Users\18617\Desktop\Forge_SteelMod\src\generated\resources, --existing, C:\Users\18617\Desktop\Forge_SteelMod\src\main\resources]
-[109月2023 17:27:46.339] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[109月2023 17:27:46.509] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[109月2023 17:27:46.584] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/18617/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[109月2023 17:27:47.004] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\18617\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.44\5f9e4f02111b8556646fe30d438a395d7831489b\javafmllanguage-1.20.1-47.1.44.jar is missing mods.toml file
-[109月2023 17:27:47.008] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\18617\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.44\b0c75b3aaa10da1e196c661e2d26a95f2ef06f89\lowcodelanguage-1.20.1-47.1.44.jar is missing mods.toml file
-[109月2023 17:27:47.015] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\18617\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.44\c9b0a38bc3bb899928b360953b4a562783c54661\mclanguage-1.20.1-47.1.44.jar is missing mods.toml file
-[109月2023 17:27:47.022] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\18617\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.44\92f79b4cb3298ce1c261e2d14515244b3445f130\fmlcore-1.20.1-47.1.44.jar is missing mods.toml file
-[109月2023 17:27:47.150] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[109月2023 17:27:48.833] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\18617\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, steelmod, --all, --output, C:\Users\18617\Desktop\Forge_SteelMod\src\generated\resources, --existing, C:\Users\18617\Desktop\Forge_SteelMod\src\main\resources]
-[109月2023 17:27:49.219] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [steelmod]
-[109月2023 17:27:54.382] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.44, for MC 1.20.1 with MCP 20230612.114412
-[109月2023 17:27:54.383] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.44 Initialized
-[109月2023 17:27:54.654] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
-[109月2023 17:27:54.660] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.421 ms
-[109月2023 17:27:55.117] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/18617/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.44_mapped_parchment_2023.08.20-1.20.1/forge-1.20.1-47.1.44_mapped_parchment_2023.08.20-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[109月2023 17:27:55.117] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/18617/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.44_mapped_parchment_2023.08.20-1.20.1/forge-1.20.1-47.1.44_mapped_parchment_2023.08.20-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[109月2023 17:27:55.332] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[109月2023 17:27:55.383] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 50 ms
-[109月2023 17:27:55.383] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[109月2023 17:27:55.447] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 63 ms
-[109月2023 17:27:55.448] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: steelmod
-[109月2023 17:27:55.707] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: steelmod finished after 258 ms
-[109月2023 17:27:55.707] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: steelmod
-[109月2023 17:27:55.754] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: steelmod finished after 47 ms
-[109月2023 17:27:55.755] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id steelmod
-[109月2023 17:27:55.772] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id steelmod finished after 17 ms
-[109月2023 17:27:55.772] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id steelmod
-[109月2023 17:27:55.774] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id steelmod finished after 1 ms
-[109月2023 17:27:55.774] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[109月2023 17:27:55.790] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 14 ms
-[109月2023 17:27:55.790] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 457 ms
-[109月2023 17:27:55.823] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 198, old count: 197, new count: 199, removed stale: 0, written: 3
+[22Sep2023 18:12:04.514] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\Feliks\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.1.44, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, steelmod, --all, --output, C:\Users\Feliks\Desktop\Forge_SteelMod\src\generated\resources, --existing, C:\Users\Feliks\Desktop\Forge_SteelMod\src\main\resources]
+[22Sep2023 18:12:04.523] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[22Sep2023 18:12:04.618] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[22Sep2023 18:12:04.664] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Feliks/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[22Sep2023 18:12:04.942] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Feliks\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.1.44\5f9e4f02111b8556646fe30d438a395d7831489b\javafmllanguage-1.20.1-47.1.44.jar is missing mods.toml file
+[22Sep2023 18:12:04.946] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Feliks\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.1.44\b0c75b3aaa10da1e196c661e2d26a95f2ef06f89\lowcodelanguage-1.20.1-47.1.44.jar is missing mods.toml file
+[22Sep2023 18:12:04.949] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Feliks\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.1.44\c9b0a38bc3bb899928b360953b4a562783c54661\mclanguage-1.20.1-47.1.44.jar is missing mods.toml file
+[22Sep2023 18:12:04.953] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Feliks\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.1.44\92f79b4cb3298ce1c261e2d14515244b3445f130\fmlcore-1.20.1-47.1.44.jar is missing mods.toml file
+[22Sep2023 18:12:05.022] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[22Sep2023 18:12:06.324] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Feliks\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, steelmod, --all, --output, C:\Users\Feliks\Desktop\Forge_SteelMod\src\generated\resources, --existing, C:\Users\Feliks\Desktop\Forge_SteelMod\src\main\resources]
+[22Sep2023 18:12:06.970] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [steelmod]
+[22Sep2023 18:12:10.809] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.1.44, for MC 1.20.1 with MCP 20230612.114412
+[22Sep2023 18:12:10.810] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.1.44 Initialized
+[22Sep2023 18:12:11.122] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[22Sep2023 18:12:11.130] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 4.377 ms
+[22Sep2023 18:12:11.498] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Feliks/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.44_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.1.44_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[22Sep2023 18:12:11.498] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Feliks/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.1.44_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.1.44_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[22Sep2023 18:12:11.720] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[22Sep2023 18:12:11.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 91 ms
+[22Sep2023 18:12:11.813] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[22Sep2023 18:12:11.907] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 93 ms
+[22Sep2023 18:12:11.907] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: steelmod
+[22Sep2023 18:12:12.078] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: steelmod finished after 170 ms
+[22Sep2023 18:12:12.078] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: steelmod
+[22Sep2023 18:12:12.119] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: steelmod finished after 41 ms
+[22Sep2023 18:12:12.119] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id steelmod
+[22Sep2023 18:12:12.151] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id steelmod finished after 31 ms
+[22Sep2023 18:12:12.151] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id steelmod
+[22Sep2023 18:12:12.153] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id steelmod finished after 1 ms
+[22Sep2023 18:12:12.153] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[22Sep2023 18:12:12.163] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 9 ms
+[22Sep2023 18:12:12.163] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 443 ms
+[22Sep2023 18:12:12.188] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 202, old count: 198, new count: 202, removed stale: 1, written: 6

@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "steelmod:steel_chest"
+          "name": "steelmod:steel_blastfurnace_core"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "steelmod:blocks/steel_chest"
+  "random_sequence": "steelmod:blocks/steel_blastfurnace_core"
 }

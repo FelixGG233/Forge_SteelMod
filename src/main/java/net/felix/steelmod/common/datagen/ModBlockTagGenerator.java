@@ -26,7 +26,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.IRONDISULFIDE.get(),
                         ModBlocks.STEELBLOCK.get(),
-
+                        ModBlocks.STEEL_BLAST_FURNACE_CORE.get(),
                         ModBlocks.STEELFENCE.get(),
                         ModBlocks.STEELPRESSUREPLATE.get(),
                         ModBlocks.STEELTRAPDOOR.get(),
@@ -34,14 +34,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.STEELSTAIRS.get(),
                         ModBlocks.STEELFENCEGATE.get(),
                         ModBlocks.STEELDOOR.get(),
-                        ModBlocks.STEEL_COVERED_BRICK.get(),
-                        ModBlocks.STEEL_CHEST.get()
+                        ModBlocks.STEEL_COVERED_BRICK.get()
 
                 );
         this.tag(ModTags.Blocks.NEEDS_STEEL_TOOL)
                 .add(ModBlocks.IRONDISULFIDE.get(),
                         ModBlocks.STEELBLOCK.get(),
-
+                        ModBlocks.STEEL_BLAST_FURNACE_CORE.get(),
                         ModBlocks.STEELFENCE.get(),
                         ModBlocks.STEELPRESSUREPLATE.get(),
                         ModBlocks.STEELTRAPDOOR.get(),
@@ -49,8 +48,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.STEELSTAIRS.get(),
                         ModBlocks.STEELFENCEGATE.get(),
                         ModBlocks.STEELDOOR.get(),
-                        ModBlocks.STEEL_COVERED_BRICK.get(),
-                        ModBlocks.STEEL_CHEST.get()
+                        ModBlocks.STEEL_COVERED_BRICK.get()
+
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)

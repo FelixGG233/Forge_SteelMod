@@ -1,8 +1,8 @@
-// 1.20.1	2023-09-10T17:27:55.7911336	Loot Tables
+// 1.20.1	2023-09-22T18:12:12.1649131	Loot Tables
 16726d112cea30533574fec30d1a20a05010f99b data/steelmod/loot_tables/blocks/iron_disulfide.json
+4869fe5c6350109182664dd82126c6567bd32195 data/steelmod/loot_tables/blocks/steel_blastfurnace_core.json
 9c01da393f7510db99a30a5d7b8ee6ff31ca7587 data/steelmod/loot_tables/blocks/steel_block.json
 4831903263d26f19fc8c1aa33d3450074886b3d2 data/steelmod/loot_tables/blocks/steel_button.json
-e868f72df740185f8f3d908ea85194069f411639 data/steelmod/loot_tables/blocks/steel_chest.json
 1f15fa20854afed793c5ab93ec23a684fe881088 data/steelmod/loot_tables/blocks/steel_covered_brick.json
 b94968cb9db4632052f346e084c4b7e56a6a71a6 data/steelmod/loot_tables/blocks/steel_door.json
 19035f300cad2224c751819c6b75ee39603a13e2 data/steelmod/loot_tables/blocks/steel_fence.json
